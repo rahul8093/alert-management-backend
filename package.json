@@ -1,0 +1,30 @@
+{
+  "name": "alert-management-backend",
+  "version": "1.0.0",
+  "description": "Alert management API + worker on top of the ptechview_cpcb database (read-only)",
+  "main": "src/server.js",
+  "scripts": {
+    "migrate": "node scripts/migrate.js",
+    "dev": "node --watch src/server.js",
+    "start": "node src/server.js",
+    "worker": "node src/worker/index.js",
+    "worker:once": "node src/worker/index.js --once",
+    "check-db": "node scripts/check-db.js",
+    "test": "node --test test/*.test.js",
+    "find-hash": "node scripts/find-hash.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "jsonwebtoken": "^9.0.2",
+    "mysql2": "^3.11.3",
+    "nodemailer": "^6.9.15"
+  },
+  "optionalDependencies": {
+    "firebase-admin": "^12.6.0"
+  }
+}
